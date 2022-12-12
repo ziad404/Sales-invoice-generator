@@ -11,13 +11,13 @@ import com.sales.generator.controller.ControllerOfSalesInvoice;
 import com.sales.generator.model.Invoice_Generator;
 import com.sales.generator.model.InvoicesTable;
 import com.sales.generator.model.LinesTable;
-public class InvoiceForm extends javax.swing.JFrame {
+public class FrameOfInvoice extends javax.swing.JFrame {
 
     /**
      * Creates new form FrameOfInvoice
      * 
      */
-    public InvoiceForm() {
+    public FrameOfInvoice() {
         initComponents();
     }
 
@@ -203,7 +203,7 @@ public class InvoiceForm extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InvoiceForm().setVisible(true);
+                new FrameOfInvoice().setVisible(true);
             }
         });
        
@@ -272,7 +272,7 @@ public class InvoiceForm extends javax.swing.JFrame {
         return customerName;
     }
 
-    public JLabel getCustomerNameLable() {
+    public JLabel getCustomerNameLbl() {
         return customerNameLable;
     }
 
@@ -280,7 +280,7 @@ public class InvoiceForm extends javax.swing.JFrame {
         return invoiceDate;
     }
 
-    public JLabel getInvoiceDateLable() {
+    public JLabel getInvoiceDateLbl() {
         return invoiceDateLable;
     }
 
@@ -318,8 +318,8 @@ public class InvoiceForm extends javax.swing.JFrame {
        int number=0;
        for(Invoice_Generator invoice : getInvoices())
        {
-          if(invoice.getNumber() > number)
-              number=invoice.getNumber();
+          if(invoice.getNum() > number)
+              number=invoice.getNum();
        }
        return ++number;
     }
